@@ -156,24 +156,6 @@ AddEventHandler("go-gunnarstacos:OpenChickenComboMeal", function()
         end
 end)
 
-RegisterNetEvent("go-gunnarstacos:XTCTaco")
-AddEventHandler("go-gunnarstacos:XTCTaco", function()
-		--remove box
-		TriggerServerEvent('QBCore:Server:RemoveItem', "taco-xtc_taco", 1)
-		--add items from box
-		TriggerServerEvent('QBCore:Server:AddItem', "taco-beef_taco", 1)
-		TriggerServerEvent('QBCore:Server:AddItem', "xtcbaggy", 5)
-end)
-
-RegisterNetEvent("go-gunnarstacos:LSDTaco")
-AddEventHandler("go-gunnarstacos:LSDTaco", function()
-		--remove box
-		TriggerServerEvent('QBCore:Server:RemoveItem', "taco-lsd_taco", 1)
-		--add items from box
-		TriggerServerEvent('QBCore:Server:AddItem', "taco-beef_taco", 1)
-		TriggerServerEvent('QBCore:Server:AddItem', "lsdbaggy", 5)
-end)
-
 RegisterNetEvent("go-gunnarstacos:BeefTaco")
 AddEventHandler("go-gunnarstacos:BeefTaco", function()
     if onDuty then
@@ -371,70 +353,6 @@ AddEventHandler("go-gunnarstacos:Nachos", function()
 					TriggerServerEvent('QBCore:Server:AddItem', "taco-nachos", 1)
                     TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["taco-nachos"], "add",1)
                     QBCore.Functions.Notify("You made Nachos", "success")
-				end, function()
-					QBCore.Functions.Notify("Cancelled..", "error")
-				end)
-			else
-   				QBCore.Functions.Notify("You dont have the ingredients to make this", "error")
-			end
-		end)
-	else 
-		QBCore.Functions.Notify("You must be Clocked into work", "error")
-	end
-end)
-
-RegisterNetEvent("go-gunnarstacos:SpecialTaco1")
-AddEventHandler("go-gunnarstacos:SpecialTaco1", function()
-    if onDuty then
-    	QBCore.Functions.TriggerCallback('go-gunnarstacos:server:get:ingredientSpecialTaco1', function(HasItems)  
-    		if HasItems then
-				QBCore.Functions.Progressbar("pickup_sla", "Making a Special Taco", 2000, false, true, {
-					disableMovement = true,
-					disableCarMovement = true,
-					disableMouse = false,
-					disableCombat = true,
-				}, {
-					animDict = "mp_common",
-					anim = "givetake1_a",
-					flags = 8,
-				}, {}, {}, function() -- Done
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-beef_taco", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "xtcbaggy", 5)
-					TriggerServerEvent('QBCore:Server:AddItem', "taco-xtc_taco", 1)
-                    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["taco-xtc_taco"], "add",1)
-                    QBCore.Functions.Notify("You made an XTC Taco", "success")
-				end, function()
-					QBCore.Functions.Notify("Cancelled..", "error")
-				end)
-			else
-   				QBCore.Functions.Notify("You dont have the ingredients to make this", "error")
-			end
-		end)
-	else 
-		QBCore.Functions.Notify("You must be Clocked into work", "error")
-	end
-end)
-
-RegisterNetEvent("go-gunnarstacos:SpecialTaco2")
-AddEventHandler("go-gunnarstacos:SpecialTaco2", function()
-    if onDuty then
-    	QBCore.Functions.TriggerCallback('go-gunnarstacos:server:get:ingredientSpecialTaco2', function(HasItems)  
-    		if HasItems then
-				QBCore.Functions.Progressbar("pickup_sla", "Making a Special Taco", 2000, false, true, {
-					disableMovement = true,
-					disableCarMovement = true,
-					disableMouse = false,
-					disableCombat = true,
-				}, {
-					animDict = "mp_common",
-					anim = "givetake1_a",
-					flags = 8,
-				}, {}, {}, function() -- Done
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-beef_taco", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "lsdbaggy", 5)
-					TriggerServerEvent('QBCore:Server:AddItem', "taco-lsd_taco", 1)
-                    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["taco-lsd_taco"], "add",1)
-                    QBCore.Functions.Notify("You made an LSD Taco", "success")
 				end, function()
 					QBCore.Functions.Notify("Cancelled..", "error")
 				end)

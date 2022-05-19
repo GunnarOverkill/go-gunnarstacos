@@ -122,30 +122,6 @@ QBCore.Functions.CreateCallback('go-gunnarstacos:server:get:ingredientNachos', f
     end
 end)
 
-QBCore.Functions.CreateCallback('go-gunnarstacos:server:get:ingredientSpecialTaco1', function(source, cb)
-    local src = source
-    local Ply = QBCore.Functions.GetPlayer(src)
-    local beef_taco = Ply.Functions.GetItemByName("taco-beef_taco")
-    local xtcbaggy = Ply.Functions.GetItemByName("xtcbaggy")
-    if beef_taco ~= nil and xtcbaggy ~= nil then
-        cb(true)
-    else
-        cb(false)
-    end
-end)
-
-QBCore.Functions.CreateCallback('go-gunnarstacos:server:get:ingredientSpecialTaco2', function(source, cb)
-    local src = source
-    local Ply = QBCore.Functions.GetPlayer(src)
-    local beef_taco = Ply.Functions.GetItemByName("taco-beef_taco")
-    local lsdbaggy = Ply.Functions.GetItemByName("lsdbaggy")
-    if beef_taco ~= nil and lsdbaggy ~= nil then
-        cb(true)
-    else
-        cb(false)
-    end
-end)
-
 QBCore.Functions.CreateCallback('go-gunnarstacos:server:get:ingredientBeefComboMeal', function(source, cb)
     local src = source
     local Ply = QBCore.Functions.GetPlayer(src)

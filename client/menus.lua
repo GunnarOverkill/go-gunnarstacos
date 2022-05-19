@@ -143,25 +143,7 @@ Citizen.CreateThread(function()
         },
         distance = 1.5
     })
-
-    exports['qb-target']:AddBoxZone("makespecialtacosgunnarstacos", vector3(419.71, -1921.4, 25.56), 1.8, 0.7, {
-        name="makespecialtacosgunnarstacos",
-        heading=140,
-        debugPoly=false,
-        minZ=24.5,
-        maxZ=27.5,
-    }, {
-        options = {
-            {
-            event = "nh-context:SpecialTacosGunnarsTacos",
-            icon = "fa-solid fa-capsules",
-            label = "Special Tacos Work Station",
-            job = "taco",
-            },
-        },
-        distance = 1.5
-    })
-
+    
     exports['qb-target']:AddBoxZone("cookingmeatgunnarstacos", vector3(425.31, -1920.79, 25.29), 1.8, 0.7, {
         name="cookingmeatgunnarstacos",
         heading=140,
@@ -331,33 +313,6 @@ RegisterNetEvent('nh-context:MealsGunnarsTacos', function(data)
             txt = "Burrito, Chicken Taco x2, Soda",
             params = {
                 event = "go-gunnarstacos:ChickenComboMeal"
-            }
-        },
-        {
-            header = "Close (ESC)",
-            isMenuHeader = true, -- Set to true to make a nonclickable title
-        }
-    })
-end)
-
-RegisterNetEvent('nh-context:SpecialTacosGunnarsTacos', function(data)
-    exports['qb-menu']:openMenu({
-        {
-            header = "Available Foods",
-            isMenuHeader = true, -- Set to true to make a nonclickable title
-        },
-        {
-            header = "Make a Special Taco",
-            txt = "IYKYK x5, Beef Taco",
-            params = {
-                event = "go-gunnarstacos:SpecialTaco1"
-            }
-        },
-        {
-            header = "Make a Special Taco",
-            txt = "IYKYK x5, Beef Taco",
-            params = {
-                event = "go-gunnarstacos:SpecialTaco2"
             }
         },
         {
