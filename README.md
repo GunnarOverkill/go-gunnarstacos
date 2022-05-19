@@ -14,7 +14,7 @@ qb-menu - https://github.com/qbcore-framework/qb-menu
 
 nh-keyboard - https://github.com/nerohiro/nh-keyboard
 
-## The script original 
+## The original scripts 
 https://github.com/Zach488/qb-burgershot
 https://github.com/elvodkaa/qb-taco
 
