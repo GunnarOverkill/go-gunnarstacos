@@ -1,5 +1,7 @@
 Based on ATMTACO
 
+(When I created this I was making for a server I was playing in and the shop was going to be named Gunnar's Tacos so feel free to change it to TacoShop or whatever you want it to be.)
+
 # Gunnars Tacos for QBCore Framework
 GunnarsTacos with target 
 
