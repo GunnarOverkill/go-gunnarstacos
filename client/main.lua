@@ -98,62 +98,22 @@ end)
 --Meal Creations
 RegisterNetEvent("go-gunnarstacos:OpenBeefComboMeal")
 AddEventHandler("go-gunnarstacos:OpenBeefComboMeal", function()
-		local randomToy = math.random(0,15)
 		--remove box
 		TriggerServerEvent('QBCore:Server:RemoveItem', "taco-beef_combo_meal", 1)
 		--add items from box
 		TriggerServerEvent('QBCore:Server:AddItem', "taco-burrito", 1)
 		TriggerServerEvent('QBCore:Server:AddItem', "taco-beef_taco", 1)
 		TriggerServerEvent('QBCore:Server:AddItem', "taco-soda", 1)
-
-		if randomToy < 4 then
-					TriggerServerEvent('QBCore:Server:AddItem', "taco-25off_coupon", 1)
-					
-		elseif randomToy == 4 then
-					TriggerServerEvent('QBCore:Server:AddItem', "taco-reverseflash_toy", 1)
-            		
-		elseif randomToy < 10 and randomToy > 4 then
-					TriggerServerEvent('QBCore:Server:AddItem', "taco-flash_toy", 1)
-					
-		elseif randomToy == 10 then
-					TriggerServerEvent('QBCore:Server:AddItem', "taco-reddeath_toy", 1)
-            		
-		elseif randomToy > 10 and randomToy < 15 then
-            		QBCore.Functions.Notify("Nothing Special in the Box, #GFN", "error")
-		elseif randomToy == 15 then
-					TriggerServerEvent('QBCore:Server:AddItem', "taco-free_taco_coupon", 1)
-            					
-        end
 end)
 
 RegisterNetEvent("go-gunnarstacos:OpenChickenComboMeal")
 AddEventHandler("go-gunnarstacos:OpenChickenComboMeal", function()
-		local randomToy = math.random(0,15)
 		--remove box
 		TriggerServerEvent('QBCore:Server:RemoveItem', "taco-chicken_combo_meal", 1)
 		--add items from box
 		TriggerServerEvent('QBCore:Server:AddItem', "taco-burrito", 1)
 		TriggerServerEvent('QBCore:Server:AddItem', "taco-chicken_taco", 2)
 		TriggerServerEvent('QBCore:Server:AddItem', "taco-soda", 1)
-
-		if randomToy < 4 then
-					TriggerServerEvent('QBCore:Server:AddItem', "taco-25off_taco", 1)
-					
-		elseif randomToy == 4 then
-					TriggerServerEvent('QBCore:Server:AddItem', "taco-reverseflash_toy", 1)
-            		
-		elseif randomToy < 10 and randomToy > 4 then
-					TriggerServerEvent('QBCore:Server:AddItem', "taco-flash_toy", 1)
-					
-		elseif randomToy == 10 then
-					TriggerServerEvent('QBCore:Server:AddItem', "taco-reddeath_toy", 1)
-            		
-		elseif randomToy > 10 and randomToy < 15 then
-            		QBCore.Functions.Notify("Nothing Special in the Box, #GFN", "error")
-		elseif randomToy == 15 then
-					TriggerServerEvent('QBCore:Server:AddItem', "taco-free_taco_coupon", 1)
-            					
-        end
 end)
 
 RegisterNetEvent("go-gunnarstacos:BeefTaco")

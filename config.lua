@@ -53,7 +53,7 @@ Config.GaragePedLocations = {
 
 Config.Items = {
 label = "Shop",
-slots = 16,
+slots = 13,
     items = {
         [1] = {
             name = "taco-ground_beef",
@@ -158,30 +158,6 @@ slots = 16,
             info = {},
             type = "item",
             slot = 13,
-        },
-        [14] = {
-            name = "taco-reddeath_toy",
-            price = 0,
-            amount = 1,
-            info = {},
-            type = "item",
-            slot = 14,
-        },
-        [15] = {
-            name = "taco-flash_toy",
-            price = 0,
-            amount = 1,
-            info = {},
-            type = "item",
-            slot = 15,
-        },
-        [16] = {
-            name = "taco-reverseflash_toy",
-            price = 0,
-            amount = 1,
-            info = {},
-            type = "item",
-            slot = 16,
         },
     }
 }
