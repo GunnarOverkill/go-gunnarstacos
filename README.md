@@ -1,5 +1,7 @@
 Based on ATMTACO
 
+*Feel free to change it from gunnarstacos to whatever you want. I also have a version called go-tacoshop if you go on my profile.*
+
 # Gunnars Tacos for QBCore Framework
 GunnarsTacos with target 
 
