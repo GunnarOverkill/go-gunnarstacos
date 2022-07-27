@@ -110,13 +110,6 @@ https://github.com/elvodkaa/qb-taco
 	-- Meals
 	['gt-beef_combo_meal'] 		 = {['name'] = 'gt-beef_combo_meal', 		    ['label'] = 'Beef Combo Meal', 	   	    ['weight'] = 100, 		['type'] = 'item', 		['image'] = 'gt-combomeal.png', 	    ['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,    ['combinable'] = nil,   ['description'] = 'Gunnar made a whole combo meal, better hope you get something special...'},
 	['gt-chicken_combo_meal'] 	 = {['name'] = 'gt-chicken_combo_meal',   	['label'] = 'Chicken Combo Meal', 	    ['weight'] = 100, 		['type'] = 'item', 		['image'] = 'gt-combomeal.png',		    ['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,    ['combinable'] = nil,   ['description'] = 'Gunnar made a whole combo meal, better hope you get something special...'},
-
-	-- Winning Items
-	['gt-25off_coupon'] 		 	 = {['name'] = 'gt-25off_coupon', 			['label'] = '25% Off Coupon', 			['weight'] = 50, 		['type'] = 'item', 		['image'] = 'gt-25off.png', 			['unique'] = false, 	['useable'] = false, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = '25% off one Menu Item at Gunnars Tacos, does not apply to combo meals'},
-	['gt-reverseflash_toy'] 		 = {['name'] = 'gt-reverseflash_toy', 		['label'] = 'The Reverse Flash', 		['weight'] = 100, 		['type'] = 'item', 		['image'] = 'gt-trfaf.png', 			['unique'] = true, 		['useable'] = false, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = 'Action Figure From Gunnars Tacos'},
-	['gt-flash_toy'] 		 		 = {['name'] = 'gt-flash_toy', 				['label'] = 'The Flash',				['weight'] = 100, 		['type'] = 'item', 		['image'] = 'gt-tfaf.png', 	    		['unique'] = true, 		['useable'] = false, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = 'Action Figure From Gunnars Tacos'},
-	['gt-reddeath_toy'] 		 	 = {['name'] = 'gt-reddeath_toy', 			['label'] = 'The Red Death', 			['weight'] = 100, 		['type'] = 'item', 		['image'] = 'gt-trdaf.png', 	        ['unique'] = true, 		['useable'] = false, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = 'Action Figure From Gunnars Taco Shop'},
-	['gt-free_taco_coupon'] 		 = {['name'] = 'gt-free_taco_coupon', 		['label'] = 'Free Taco Coupon', 		['weight'] = 50, 		['type'] = 'item', 		['image'] = 'gt-freetaco.png', 			['unique'] = false, 	['useable'] = false, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = 'One Free Beef or Chicken Taco from Gunnars Tacos'},
 ```
 
 ## add to qb-smallresources/server/consumables.lua
