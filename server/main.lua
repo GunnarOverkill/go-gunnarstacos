@@ -36,11 +36,11 @@ end)
 QBCore.Functions.CreateCallback('go-gunnarstacos:server:get:ingredientBeefTaco', function(source, cb)
     local src = source
     local Ply = QBCore.Functions.GetPlayer(src)
-    local tortilla = Ply.Functions.GetItemByName("taco-tortilla")
-    local cooked_beef = Ply.Functions.GetItemByName("taco-cooked_beef")
-    local seasoning = Ply.Functions.GetItemByName("taco-seasoning")
-    local lettuce = Ply.Functions.GetItemByName("taco-lettuce")
-    local cheese = Ply.Functions.GetItemByName("taco-cheese")
+    local tortilla = Ply.Functions.GetItemByName("gt-tortilla")
+    local cooked_beef = Ply.Functions.GetItemByName("gt-cooked_beef")
+    local seasoning = Ply.Functions.GetItemByName("gt-seasoning")
+    local lettuce = Ply.Functions.GetItemByName("gt-lettuce")
+    local cheese = Ply.Functions.GetItemByName("gt-cheese")
     if tortilla ~= nil and cooked_beef ~= nil and seasoning ~= nil and lettuce ~= nil and cheese ~= nil then
         cb(true)
     else
@@ -51,11 +51,11 @@ end)
 QBCore.Functions.CreateCallback('go-gunnarstacos:server:get:ingredientChickenTaco', function(source, cb)
     local src = source
     local Ply = QBCore.Functions.GetPlayer(src)
-    local tortilla = Ply.Functions.GetItemByName("taco-tortilla")
-    local cooked_chicken = Ply.Functions.GetItemByName("taco-cooked_chicken")
-    local seasoning = Ply.Functions.GetItemByName("taco-seasoning")
-    local lettuce = Ply.Functions.GetItemByName("taco-lettuce")
-    local cheese = Ply.Functions.GetItemByName("taco-cheese")
+    local tortilla = Ply.Functions.GetItemByName("gt-tortilla")
+    local cooked_chicken = Ply.Functions.GetItemByName("gt-cooked_chicken")
+    local seasoning = Ply.Functions.GetItemByName("gt-seasoning")
+    local lettuce = Ply.Functions.GetItemByName("gt-lettuce")
+    local cheese = Ply.Functions.GetItemByName("gt-cheese")
     if tortilla ~= nil and cooked_chicken ~= nil and seasoning ~= nil and lettuce ~= nil and cheese ~= nil then
         cb(true)
     else
@@ -66,11 +66,11 @@ end)
 QBCore.Functions.CreateCallback('go-gunnarstacos:server:get:ingredientBurrito', function(source, cb)
     local src = source
     local Ply = QBCore.Functions.GetPlayer(src)
-    local tortilla = Ply.Functions.GetItemByName("taco-tortilla")
-    local cooked_beef = Ply.Functions.GetItemByName("taco-cooked_beef")
-    local seasoning = Ply.Functions.GetItemByName("taco-seasoning")
-    local refried_beans = Ply.Functions.GetItemByName("taco-refried_beans")
-    local cheese = Ply.Functions.GetItemByName("taco-cheese")
+    local tortilla = Ply.Functions.GetItemByName("gt-tortilla")
+    local cooked_beef = Ply.Functions.GetItemByName("gt-cooked_beef")
+    local seasoning = Ply.Functions.GetItemByName("gt-seasoning")
+    local refried_beans = Ply.Functions.GetItemByName("gt-refried_beans")
+    local cheese = Ply.Functions.GetItemByName("gt-cheese")
     if tortilla ~= nil and cooked_beef ~= nil and seasoning ~= nil and refried_beans ~= nil and cheese ~= nil then
         cb(true)
     else
@@ -81,11 +81,11 @@ end)
 QBCore.Functions.CreateCallback('go-gunnarstacos:server:get:ingredientEnchilada', function(source, cb)
     local src = source
     local Ply = QBCore.Functions.GetPlayer(src)
-    local tortilla = Ply.Functions.GetItemByName("taco-tortilla")
-    local cooked_beef = Ply.Functions.GetItemByName("taco-cooked_beef")
-    local seasoning = Ply.Functions.GetItemByName("taco-seasoning")
-    local enchilada_sauce = Ply.Functions.GetItemByName("taco-enchilada_sauce")
-    local cheese = Ply.Functions.GetItemByName("taco-cheese")
+    local tortilla = Ply.Functions.GetItemByName("gt-tortilla")
+    local cooked_beef = Ply.Functions.GetItemByName("gt-cooked_beef")
+    local seasoning = Ply.Functions.GetItemByName("gt-seasoning")
+    local enchilada_sauce = Ply.Functions.GetItemByName("gt-enchilada_sauce")
+    local cheese = Ply.Functions.GetItemByName("gt-cheese")
     if tortilla ~= nil and cooked_beef ~= nil and seasoning ~= nil and enchilada_sauce ~= nil and cheese ~= nil then
         cb(true)
     else
@@ -96,10 +96,10 @@ end)
 QBCore.Functions.CreateCallback('go-gunnarstacos:server:get:ingredientQuesadilla', function(source, cb)
     local src = source
     local Ply = QBCore.Functions.GetPlayer(src)
-    local tortilla = Ply.Functions.GetItemByName("taco-tortilla")
-    local cooked_chicken = Ply.Functions.GetItemByName("taco-cooked_chicken")
-    local seasoning = Ply.Functions.GetItemByName("taco-seasoning")
-    local cheese = Ply.Functions.GetItemByName("taco-cheese")
+    local tortilla = Ply.Functions.GetItemByName("gt-tortilla")
+    local cooked_chicken = Ply.Functions.GetItemByName("gt-cooked_chicken")
+    local seasoning = Ply.Functions.GetItemByName("gt-seasoning")
+    local cheese = Ply.Functions.GetItemByName("gt-cheese")
     if tortilla ~= nil and cooked_chicken ~= nil and seasoning ~= nil and cheese ~= nil then
         cb(true)
     else
@@ -110,11 +110,11 @@ end)
 QBCore.Functions.CreateCallback('go-gunnarstacos:server:get:ingredientNachos', function(source, cb)
     local src = source
     local Ply = QBCore.Functions.GetPlayer(src)
-    local tortilla = Ply.Functions.GetItemByName("taco-tortilla_chips")
-    local cooked_beef = Ply.Functions.GetItemByName("taco-cooked_beef")
-    local seasoning = Ply.Functions.GetItemByName("taco-seasoning")
-    local salsa = Ply.Functions.GetItemByName("taco-salsa")
-    local nacho_cheese = Ply.Functions.GetItemByName("taco-nacho_cheese")
+    local tortilla = Ply.Functions.GetItemByName("gt-tortilla_chips")
+    local cooked_beef = Ply.Functions.GetItemByName("gt-cooked_beef")
+    local seasoning = Ply.Functions.GetItemByName("gt-seasoning")
+    local salsa = Ply.Functions.GetItemByName("gt-salsa")
+    local nacho_cheese = Ply.Functions.GetItemByName("gt-nacho_cheese")
     if tortilla ~= nil and cooked_beef ~= nil and seasoning ~= nil and salsa ~= nil and nacho_cheese ~= nil then
         cb(true)
     else
@@ -125,9 +125,9 @@ end)
 QBCore.Functions.CreateCallback('go-gunnarstacos:server:get:ingredientBeefComboMeal', function(source, cb)
     local src = source
     local Ply = QBCore.Functions.GetPlayer(src)
-    local burrito = Ply.Functions.GetItemByName("taco-burrito")
-    local beef_taco = Ply.Functions.GetItemByName("taco-beef_taco")
-    local soda = Ply.Functions.GetItemByName("taco-soda")
+    local burrito = Ply.Functions.GetItemByName("gt-burrito")
+    local beef_taco = Ply.Functions.GetItemByName("gt-beef_taco")
+    local soda = Ply.Functions.GetItemByName("gt-soda")
     if burrito ~= nil and beef_taco ~= nil and soda ~= nil then
         cb(true)
     else
@@ -138,9 +138,9 @@ end)
 QBCore.Functions.CreateCallback('go-gunnarstacos:server:get:ingredientChickenComboMeal', function(source, cb)
     local src = source
     local Ply = QBCore.Functions.GetPlayer(src)
-    local burrito = Ply.Functions.GetItemByName("taco-burrito")
-    local chicken_taco = Ply.Functions.GetItemByName("taco-chicken_taco")
-    local soda = Ply.Functions.GetItemByName("taco-soda")
+    local burrito = Ply.Functions.GetItemByName("gt-burrito")
+    local chicken_taco = Ply.Functions.GetItemByName("gt-chicken_taco")
+    local soda = Ply.Functions.GetItemByName("gt-soda")
     if burrito ~= nil and chicken_taco ~= nil and soda ~= nil then
         cb(true)
     else
@@ -148,22 +148,22 @@ QBCore.Functions.CreateCallback('go-gunnarstacos:server:get:ingredientChickenCom
     end
 end)
 
-QBCore.Functions.CreateUseableItem("taco-xtc_taco", function(source, item)
+QBCore.Functions.CreateUseableItem("gt-xtc_taco", function(source, item)
     local Player = QBCore.Functions.GetPlayer(source)
     TriggerClientEvent("go-gunnarstacos:XTCTaco", source, item.name)
 end)
 
-QBCore.Functions.CreateUseableItem("taco-lsd_taco", function(source, item)
+QBCore.Functions.CreateUseableItem("gt-lsd_taco", function(source, item)
     local Player = QBCore.Functions.GetPlayer(source)
     TriggerClientEvent("go-gunnarstacos:LSDTaco", source, item.name)
 end)
 
-QBCore.Functions.CreateUseableItem("taco-beef_combo_meal", function(source, item)
+QBCore.Functions.CreateUseableItem("gt-beef_combo_meal", function(source, item)
     local Player = QBCore.Functions.GetPlayer(source)
     TriggerClientEvent("go-gunnarstacos:OpenBeefComboMeal", source, item.name)
 end)
 
-QBCore.Functions.CreateUseableItem("taco-chicken_combo_meal", function(source, item)
+QBCore.Functions.CreateUseableItem("gt-chicken_combo_meal", function(source, item)
     local Player = QBCore.Functions.GetPlayer(source)
     TriggerClientEvent("go-gunnarstacos:OpenChickenComboMeal", source, item.name)
 end)

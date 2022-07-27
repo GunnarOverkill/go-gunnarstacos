@@ -100,28 +100,28 @@ RegisterNetEvent("go-gunnarstacos:OpenBeefComboMeal")
 AddEventHandler("go-gunnarstacos:OpenBeefComboMeal", function()
 		local randomToy = math.random(0,15)
 		--remove box
-		TriggerServerEvent('QBCore:Server:RemoveItem', "taco-beef_combo_meal", 1)
+		TriggerServerEvent('QBCore:Server:RemoveItem', "gt-beef_combo_meal", 1)
 		--add items from box
-		TriggerServerEvent('QBCore:Server:AddItem', "taco-burrito", 1)
-		TriggerServerEvent('QBCore:Server:AddItem', "taco-beef_taco", 1)
-		TriggerServerEvent('QBCore:Server:AddItem', "taco-soda", 1)
+		TriggerServerEvent('QBCore:Server:AddItem', "gt-burrito", 1)
+		TriggerServerEvent('QBCore:Server:AddItem', "gt-beef_taco", 1)
+		TriggerServerEvent('QBCore:Server:AddItem', "gt-soda", 1)
 
 		if randomToy < 4 then
-					TriggerServerEvent('QBCore:Server:AddItem', "taco-25off_coupon", 1)
+					TriggerServerEvent('QBCore:Server:AddItem', "gt-25off_coupon", 1)
 					
 		elseif randomToy == 4 then
-					TriggerServerEvent('QBCore:Server:AddItem', "taco-reverseflash_toy", 1)
+					TriggerServerEvent('QBCore:Server:AddItem', "gt-reverseflash_toy", 1)
             		
 		elseif randomToy < 10 and randomToy > 4 then
-					TriggerServerEvent('QBCore:Server:AddItem', "taco-flash_toy", 1)
+					TriggerServerEvent('QBCore:Server:AddItem', "gt-flash_toy", 1)
 					
 		elseif randomToy == 10 then
-					TriggerServerEvent('QBCore:Server:AddItem', "taco-reddeath_toy", 1)
+					TriggerServerEvent('QBCore:Server:AddItem', "gt-reddeath_toy", 1)
             		
 		elseif randomToy > 10 and randomToy < 15 then
             		QBCore.Functions.Notify("Nothing Special in the Box, #GFN", "error")
 		elseif randomToy == 15 then
-					TriggerServerEvent('QBCore:Server:AddItem', "taco-free_taco_coupon", 1)
+					TriggerServerEvent('QBCore:Server:AddItem', "gt-free_taco_coupon", 1)
             					
         end
 end)
@@ -130,28 +130,28 @@ RegisterNetEvent("go-gunnarstacos:OpenChickenComboMeal")
 AddEventHandler("go-gunnarstacos:OpenChickenComboMeal", function()
 		local randomToy = math.random(0,15)
 		--remove box
-		TriggerServerEvent('QBCore:Server:RemoveItem', "taco-chicken_combo_meal", 1)
+		TriggerServerEvent('QBCore:Server:RemoveItem', "gt-chicken_combo_meal", 1)
 		--add items from box
-		TriggerServerEvent('QBCore:Server:AddItem', "taco-burrito", 1)
-		TriggerServerEvent('QBCore:Server:AddItem', "taco-chicken_taco", 2)
-		TriggerServerEvent('QBCore:Server:AddItem', "taco-soda", 1)
+		TriggerServerEvent('QBCore:Server:AddItem', "gt-burrito", 1)
+		TriggerServerEvent('QBCore:Server:AddItem', "gt-chicken_taco", 2)
+		TriggerServerEvent('QBCore:Server:AddItem', "gt-soda", 1)
 
 		if randomToy < 4 then
-					TriggerServerEvent('QBCore:Server:AddItem', "taco-25off_taco", 1)
+					TriggerServerEvent('QBCore:Server:AddItem', "gt-25off_taco", 1)
 					
 		elseif randomToy == 4 then
-					TriggerServerEvent('QBCore:Server:AddItem', "taco-reverseflash_toy", 1)
+					TriggerServerEvent('QBCore:Server:AddItem', "gt-reverseflash_toy", 1)
             		
 		elseif randomToy < 10 and randomToy > 4 then
-					TriggerServerEvent('QBCore:Server:AddItem', "taco-flash_toy", 1)
+					TriggerServerEvent('QBCore:Server:AddItem', "gt-flash_toy", 1)
 					
 		elseif randomToy == 10 then
-					TriggerServerEvent('QBCore:Server:AddItem', "taco-reddeath_toy", 1)
+					TriggerServerEvent('QBCore:Server:AddItem', "gt-reddeath_toy", 1)
             		
 		elseif randomToy > 10 and randomToy < 15 then
             		QBCore.Functions.Notify("Nothing Special in the Box, #GFN", "error")
 		elseif randomToy == 15 then
-					TriggerServerEvent('QBCore:Server:AddItem', "taco-free_taco_coupon", 1)
+					TriggerServerEvent('QBCore:Server:AddItem', "gt-free_taco_coupon", 1)
             					
         end
 end)
@@ -171,13 +171,13 @@ AddEventHandler("go-gunnarstacos:BeefTaco", function()
 					anim = "givetake1_a",
 					flags = 8,
 				}, {}, {}, function() -- Done
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-tortilla", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-cooked_beef", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-seasoning", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-lettuce", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-cheese", 1)
-					TriggerServerEvent('QBCore:Server:AddItem', "taco-beef_taco", 1)
-                    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["taco-beef_taco"], "add", 1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gt-tortilla", 1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gt-cooked_beef", 1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gt-seasoning", 1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gt-lettuce", 1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gt-cheese", 1)
+					TriggerServerEvent('QBCore:Server:AddItem', "gt-beef_taco", 1)
+                    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["gt-beef_taco"], "add", 1)
                     QBCore.Functions.Notify("You made a Beef Taco", "success")
 				end, function()
 					QBCore.Functions.Notify("Cancelled..", "error")
@@ -206,13 +206,13 @@ AddEventHandler("go-gunnarstacos:ChickenTaco", function()
 					anim = "givetake1_a",
 					flags = 8,
 				}, {}, {}, function() -- Done
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-tortilla", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-cooked_chicken", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-seasoning", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-lettuce", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-cheese", 1)
-					TriggerServerEvent('QBCore:Server:AddItem', "taco-chicken_taco", 1)
-                    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["taco-chicken_taco"], "add",1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gt-tortilla", 1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gt-cooked_chicken", 1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gt-seasoning", 1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gt-lettuce", 1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gt-cheese", 1)
+					TriggerServerEvent('QBCore:Server:AddItem', "gt-chicken_taco", 1)
+                    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["gt-chicken_taco"], "add",1)
                     QBCore.Functions.Notify("You made a Chicken Taco", "success")
 				end, function()
 					QBCore.Functions.Notify("Cancelled..", "error")
@@ -241,13 +241,13 @@ AddEventHandler("go-gunnarstacos:Burrito", function()
 					anim = "givetake1_a",
 					flags = 8,
 				}, {}, {}, function() -- Done
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-tortilla", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-cooked_beef", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-seasoning", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-refried_beans", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-cheese", 1)
-					TriggerServerEvent('QBCore:Server:AddItem', "taco-burrito", 1)
-                    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["taco-burrito"], "add",1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gt-tortilla", 1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gt-cooked_beef", 1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gt-seasoning", 1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gt-refried_beans", 1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gt-cheese", 1)
+					TriggerServerEvent('QBCore:Server:AddItem', "gt-burrito", 1)
+                    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["gt-burrito"], "add",1)
                     QBCore.Functions.Notify("You made a Burrito", "success")
 				end, function()
 					QBCore.Functions.Notify("Cancelled..", "error")
@@ -276,13 +276,13 @@ AddEventHandler("go-gunnarstacos:Enchilada", function()
 					anim = "givetake1_a",
 					flags = 8,
 				}, {}, {}, function() -- Done
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-tortilla", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-cooked_beef", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-seasoning", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-enchilada_sauce", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-cheese", 1)
-					TriggerServerEvent('QBCore:Server:AddItem', "taco-enchilada", 1)
-                    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["taco-enchilada"], "add",1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gt-tortilla", 1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gt-cooked_beef", 1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gt-seasoning", 1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gt-enchilada_sauce", 1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gt-cheese", 1)
+					TriggerServerEvent('QBCore:Server:AddItem', "gt-enchilada", 1)
+                    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["gt-enchilada"], "add",1)
                     QBCore.Functions.Notify("You made a Enchilada", "success")
 				end, function()
 					QBCore.Functions.Notify("Cancelled..", "error")
@@ -311,12 +311,12 @@ AddEventHandler("go-gunnarstacos:Quesadilla", function()
 					anim = "givetake1_a",
 					flags = 8,
 				}, {}, {}, function() -- Done
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-tortilla", 1)
-                    TriggerServerEvent('QBCore:Server:RemoveItem', "taco-cooked_chicken", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-seasoning", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-cheese", 1)
-					TriggerServerEvent('QBCore:Server:AddItem', "taco-quesadilla", 1)
-                    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["taco-quesadilla"], "add",1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gt-tortilla", 1)
+                    TriggerServerEvent('QBCore:Server:RemoveItem', "gt-cooked_chicken", 1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gt-seasoning", 1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gt-cheese", 1)
+					TriggerServerEvent('QBCore:Server:AddItem', "gt-quesadilla", 1)
+                    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["gt-quesadilla"], "add",1)
                     QBCore.Functions.Notify("You made a Quesadilla", "success")
 				end, function()
 					QBCore.Functions.Notify("Cancelled..", "error")
@@ -345,13 +345,13 @@ AddEventHandler("go-gunnarstacos:Nachos", function()
 					anim = "givetake1_a",
 					flags = 8,
 				}, {}, {}, function() -- Done
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-tortilla_chips", 1)
-                    TriggerServerEvent('QBCore:Server:RemoveItem', "taco-cooked_beef", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-seasoning", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-salsa", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-nacho_cheese", 1)
-					TriggerServerEvent('QBCore:Server:AddItem', "taco-nachos", 1)
-                    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["taco-nachos"], "add",1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gt-tortilla_chips", 1)
+                    TriggerServerEvent('QBCore:Server:RemoveItem', "gt-cooked_beef", 1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gt-seasoning", 1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gt-salsa", 1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gt-nacho_cheese", 1)
+					TriggerServerEvent('QBCore:Server:AddItem', "gt-nachos", 1)
+                    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["gt-nachos"], "add",1)
                     QBCore.Functions.Notify("You made Nachos", "success")
 				end, function()
 					QBCore.Functions.Notify("Cancelled..", "error")
@@ -380,11 +380,11 @@ AddEventHandler("go-gunnarstacos:BeefComboMeal", function()
 					anim = "givetake1_a",
 					flags = 8,
 				}, {}, {}, function() -- Done
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-burrito", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-beef_taco", 2)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-soda", 1)
-					TriggerServerEvent('QBCore:Server:AddItem', "taco-beef_combo_meal", 1)
-                    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["taco-beef_combo_meal"], "add",1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gt-burrito", 1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gt-beef_taco", 2)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gt-soda", 1)
+					TriggerServerEvent('QBCore:Server:AddItem', "gt-beef_combo_meal", 1)
+                    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["gt-beef_combo_meal"], "add",1)
                     QBCore.Functions.Notify("You made a Beef Combo Meal", "success")
 				end, function()
 					QBCore.Functions.Notify("Cancelled..", "error")
@@ -413,11 +413,11 @@ AddEventHandler("go-gunnarstacos:ChickenComboMeal", function()
 					anim = "givetake1_a",
 					flags = 8,
 				}, {}, {}, function() -- Done
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-burrito", 1)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-chicken_taco", 2)
-					TriggerServerEvent('QBCore:Server:RemoveItem', "taco-soda", 1)
-					TriggerServerEvent('QBCore:Server:AddItem', "taco-chicken_combo_meal", 1)
-                    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["taco-chicken_combo_meal"], "add",1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gt-burrito", 1)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gt-chicken_taco", 2)
+					TriggerServerEvent('QBCore:Server:RemoveItem', "gt-soda", 1)
+					TriggerServerEvent('QBCore:Server:AddItem', "gt-chicken_combo_meal", 1)
+                    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["gt-chicken_combo_meal"], "add",1)
                     QBCore.Functions.Notify("You made a Chicken Combo Meal", "success")
 				end, function()
 					QBCore.Functions.Notify("Cancelled..", "error")
@@ -441,7 +441,7 @@ AddEventHandler("go-gunnarstacos:Soda", function()
         else
             QBCore.Functions.Notify("You don't have any soda syrup..", "error")
         end
-      end, 'taco-soda_syrup')
+      end, 'gt-soda_syrup')
     else
         QBCore.Functions.Notify("You must be Clocked into work", "error")
     end
@@ -456,7 +456,7 @@ AddEventHandler("go-gunnarstacos:Coffee", function()
         else
             QBCore.Functions.Notify("You don't have any coffee beans..", "error")
         end
-      end, 'taco-coffee_beans')
+      end, 'gt-coffee_beans')
     else
         QBCore.Functions.Notify("You must be Clocked into work", "error")
     end
@@ -471,7 +471,7 @@ AddEventHandler("go-gunnarstacos:CookedBeef", function()
         else
             QBCore.Functions.Notify("You don't have any ground beef..", "error")
         end
-      end, 'taco-ground_beef')
+      end, 'gt-ground_beef')
     else
         QBCore.Functions.Notify("You must be Clocked into work", "error")
     end
@@ -486,7 +486,7 @@ AddEventHandler("go-gunnarstacos:CookedChicken", function()
         else
             QBCore.Functions.Notify("You don't have any raw chicken..", "error")
         end
-      end, 'taco-raw_chicken')
+      end, 'gt-raw_chicken')
     else
         QBCore.Functions.Notify("You must be Clocked into work", "error")
     end
@@ -494,7 +494,7 @@ end)
 
 -- Function Portion
 function CookBeef()
-    TriggerServerEvent('QBCore:Server:RemoveItem', "taco-ground_beef", 1)
+    TriggerServerEvent('QBCore:Server:RemoveItem', "gt-ground_beef", 1)
     QBCore.Functions.Progressbar("pickup", "Cooking the Ground Beef..", 4000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
@@ -512,14 +512,14 @@ function CookBeef()
     }
 )
     Citizen.Wait(4000)
-    TriggerServerEvent('QBCore:Server:AddItem', "taco-cooked_beef", 1)
-    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["taco-cooked_beef"], "add")
+    TriggerServerEvent('QBCore:Server:AddItem', "gt-cooked_beef", 1)
+    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["gt-cooked_beef"], "add")
     QBCore.Functions.Notify("You cooked the beef", "success")
     StopAnimTask(PlayerPedId(), "amb@prop_human_bbq@male@base", "base", 1.0)
 end
 
 function CookChicken()
-    TriggerServerEvent('QBCore:Server:RemoveItem', "taco-raw_chicken", 1)
+    TriggerServerEvent('QBCore:Server:RemoveItem', "gt-raw_chicken", 1)
     QBCore.Functions.Progressbar("pickup", "Cooking the Raw Chicken..", 4000, false, true, {
         disableMovement = true,
         disableCarMovement = true,
@@ -537,14 +537,14 @@ function CookChicken()
     }    
 )
     Citizen.Wait(4000)
-    TriggerServerEvent('QBCore:Server:AddItem', "taco-cooked_chicken", 1)
-    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["taco-cooked_chicken"], "add")
+    TriggerServerEvent('QBCore:Server:AddItem', "gt-cooked_chicken", 1)
+    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["gt-cooked_chicken"], "add")
     QBCore.Functions.Notify("You cooked the chicken", "success")
     StopAnimTask(PlayerPedId(), "amb@prop_human_bbq@male@base", "base", 1.0)
 end
 
 function MixSoda()
-    TriggerServerEvent('QBCore:Server:RemoveItem', "taco-soda_syrup", 1)
+    TriggerServerEvent('QBCore:Server:RemoveItem', "gt-soda_syrup", 1)
     QBCore.Functions.Progressbar("pickup", "Filling a cup..", 4000, false, true, {
         disableMovement = true,
         disableCarMovement = false,
@@ -552,13 +552,13 @@ function MixSoda()
         disableCombat = false,
     })
     Citizen.Wait(4000)
-    TriggerServerEvent('QBCore:Server:AddItem', "taco-soda", 1)
-    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["taco-soda"], "add")
+    TriggerServerEvent('QBCore:Server:AddItem', "gt-soda", 1)
+    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["gt-soda"], "add")
     QBCore.Functions.Notify("You made a Soda", "success")
 end
 
 function BrewCoffee()
-    TriggerServerEvent('QBCore:Server:RemoveItem', "taco-coffee_beans", 1)
+    TriggerServerEvent('QBCore:Server:RemoveItem', "gt-coffee_beans", 1)
     QBCore.Functions.Progressbar("pickup", "Filling a cup..", 4000, false, true, {
         disableMovement = true,
         disableCarMovement = false,
@@ -566,8 +566,8 @@ function BrewCoffee()
         disableCombat = false,
     })
     Citizen.Wait(4000)
-    TriggerServerEvent('QBCore:Server:AddItem', "taco-coffee", 1)
-    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["taco-coffee"], "add")
+    TriggerServerEvent('QBCore:Server:AddItem', "gt-coffee", 1)
+    TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["gt-coffee"], "add")
     QBCore.Functions.Notify("You made a Coffee", "success")
 end
 
