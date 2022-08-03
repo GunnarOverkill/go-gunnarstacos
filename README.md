@@ -22,7 +22,7 @@ https://github.com/elvodkaa/qb-taco
 
 ## add to qb-core/shared/jobs.lua or qb-core/shared.lua (depending on which version of QBCore you are using)
 ```
-    ["taco"] = {
+    ["gt"] = {
 		label = "Gunnars Tacos",
 		defaultDuty = true,
 		grades = {
@@ -67,7 +67,7 @@ https://github.com/elvodkaa/qb-taco
 				event = "garage:GunnarsTacosGarage",
 				icon = "fas fa-car",
 				label = "Gunnars Tacos Garage",
-				job = "taco",
+				job = "gt",
 			}
 		},
 	distance = 2.5,

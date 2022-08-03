@@ -69,7 +69,7 @@ RegisterNetEvent('go-gunnarstacos:garage')
 AddEventHandler('go-gunnarstacos:garage', function(bs)
     local vehicle = bs.vehicle
     local coords = vector4(414.3, -1928.83, 24.49, 230.79)
-        if PlayerData.job.name == "taco" then
+        if PlayerData.job.name == "gt" then
             if vehicle == 'taco' then		
                 QBCore.Functions.SpawnVehicle(vehicle, function(veh)
                     SetVehicleNumberPlateText(veh, "GTacos"..tostring(math.random(1000, 9999)))
