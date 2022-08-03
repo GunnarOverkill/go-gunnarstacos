@@ -13,7 +13,7 @@ Citizen.CreateThread(function()
 			event = "go-gunnarstacos:Duty",
 			icon = "far fa-clipboard",
 			label = "Clock On/Off",
-			job = "taco",
+			job = "gt",
 		    },
 		},
 		distance = 1.5
@@ -65,7 +65,7 @@ Citizen.CreateThread(function()
             event = "nh-context:FridgeGunnarsTacos",
             icon = "fa-solid fa-refrigerator",
             label = "Open Fridge",
-            job = "taco",
+            job = "gt",
             },
         },
         distance = 1.5
@@ -83,7 +83,7 @@ Citizen.CreateThread(function()
             event = "nh-context:OrderMenuGunnarsTacos",
             icon = "fas fa-laptop",
             label = "Get Ingredients",
-            job = "taco",
+            job = "gt",
             },
         },
         distance = 1.5
@@ -101,7 +101,7 @@ Citizen.CreateThread(function()
             event = "go-gunnarstacos:Storage",
             icon = "fas fa-box",
             label = "Storage",
-            job = "taco",
+            job = "gt",
             },
         },
         distance = 1.5
@@ -119,7 +119,7 @@ Citizen.CreateThread(function()
             event = "nh-context:FoodsGunnarsTacos",
             icon = "fa-solid fa-taco",
             label = "Food Work Station",
-            job = "taco",
+            job = "gt",
             },
         },
         distance = 1.5
@@ -138,7 +138,7 @@ Citizen.CreateThread(function()
             event = "nh-context:MealsGunnarsTacos",
             icon = "fa-solid fa-hand-holding-box",
             label = "Meal Work Station",
-            job = "taco",
+            job = "gt",
             },
         },
         distance = 1.5
@@ -156,7 +156,7 @@ Citizen.CreateThread(function()
             event = "nh-context:CookMeatGunnarsTacos",
             icon = "fa-solid fa-meat",
             label = "Cook Meats Work Station",
-            job = "taco",
+            job = "gt",
             },
         },
         distance = 1.5
@@ -175,7 +175,7 @@ Citizen.CreateThread(function()
             parms = "1",
             icon = "fas fa-credit-card",
             label = "Charge Customer",
-            job = "taco",
+            job = "gt",
             },
         },
         distance = 1.5
@@ -194,7 +194,7 @@ Citizen.CreateThread(function()
             parms = "1",
             icon = "fas fa-credit-card",
             label = "Charge Customer",
-            job = "taco",
+            job = "gt",
             },
         },
         distance = 1.5
@@ -212,7 +212,7 @@ Citizen.CreateThread(function()
             event = "nh-context:DrinkMenuGunnarsTacos",
             icon = "fas fa-filter",
             label = "Make Some Soda and Coffee",
-            job = "taco",
+            job = "gt",
             },
         },
         distance = 1.5
@@ -230,7 +230,7 @@ Citizen.CreateThread(function()
             event = "nh-context:DrinkMenuGunnarsTacos",
             icon = "fas fa-filter",
             label = "Make Some Soda and Coffee",
-            job = "taco",
+            job = "gt",
             },
         },
         distance = 1.5
@@ -420,26 +420,33 @@ RegisterNetEvent('nh-context:DrinkMenuGunnarsTacos', function(data)
     })
 end)
 
+-- Bill Stuff
 RegisterNetEvent("go-gunnarstacos:bill")
 AddEventHandler("go-gunnarstacos:bill", function()
-    local bill = exports["nh-keyboard"]:KeyboardInput({
+    local bill = exports['qb-input']:ShowInput({
         header = "Create Receipt",
-        rows = {
+		submitText = "Bill",
+        inputs = {
             {
-                id = 0,
-                txt = "Server ID"
+                text = "Server ID(#)",
+				name = "citizenid", -- name of the input should be unique otherwise it might override
+                type = "text", -- type of the input
+                isRequired = true -- Optional [accepted values: true | false] but will submit the form if no value is inputted
             },
             {
-                id = 1,
-                txt = "Amount"
+                text = "Bill Price ($)", -- text you want to be displayed as a place holder
+                name = "billprice", -- name of the input should be unique otherwise it might override
+                type = "number", -- type of the input - number will not allow non-number characters in the field so only accepts 0-9
+                isRequired = false -- Optional [accepted values: true | false] but will submit the form if no value is inputted
             }
+			
         }
     })
     if bill ~= nil then
-        if bill[1].input == nil or bill[2].input == nil then 
+        if bill.citizenid == nil or bill.billprice == nil then 
             return 
         end
-        TriggerServerEvent("go-gunnarstacos:bill:player", bill[1].input, bill[2].input)
+        TriggerServerEvent("go-gunnarstacos:bill:player", bill.citizenid, bill.billprice)
     end
 end)
 
