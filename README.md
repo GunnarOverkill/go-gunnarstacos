@@ -54,7 +54,7 @@ https://github.com/elvodkaa/qb-taco
   ```
  ## add to qb-bossmenu/config.lua
  ```
-     ['taco'] = vector3(20.45, -1602.09, 29.38),
+     ['gt'] = vector3(20.45, -1602.09, 29.38),
  ```
  
  ## add to qb-target/init.lua(sometimes config.lua) in the Config.TargetModels
