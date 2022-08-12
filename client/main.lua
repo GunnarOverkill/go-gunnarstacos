@@ -573,5 +573,5 @@ end
 
 RegisterNetEvent("go-gunnarstacos:shop")
 AddEventHandler("go-gunnarstacos:shop", function()
-    TriggerServerEvent("inventory:server:OpenInventory", "shop", "taco", Config.Items)
+    TriggerServerEvent("inventory:server:OpenInventory", "shop", "gt", Config.Items)
 end)
