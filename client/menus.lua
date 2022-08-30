@@ -1,12 +1,12 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
 Citizen.CreateThread(function()
-	exports['qb-target']:AddBoxZone("GunnarsTacosDuty", vector3(429.25, -1913.84, 25.2), 1.4, 1.2, {
-		name = "GunnarsTacosDuty",
-		heading = 32,
+	exports['qb-target']:AddBoxZone("GunnarsTacos-Duty", vector3(429.24, -1913.8, 25.47), 0.8, 0.5, {
+		name = "GunnarsTacos-Duty",
+		heading = 225,
 		debugPoly = false,
-		minZ=24.5,
-		maxZ=27.5,
+		minZ=24.0,
+		maxZ=27.0,
 	}, {
 		options = {
 		    {  
@@ -19,12 +19,12 @@ Citizen.CreateThread(function()
 		distance = 1.5
 	})
 
-	exports['qb-target']:AddBoxZone("gunnarstacos_tray_1", vector3(417.8, -1915.28, 25.25), 1.05, 1.0, {
-		name = "gunnarstacos_tray_1",
-		heading = 35.0,
+	exports['qb-target']:AddBoxZone("GunnarsTacos-Tray1", vector3(418.15, -1915.08, 25.47), 1, 1, {
+		name = "GunnarsTacos-Tray1",
+		heading = 315,
 		debugPoly = false,
-		minZ=24.5,
-		maxZ=27.5,
+		minZ=24.0,
+		maxZ=27.0,
 	}, {
 		options = {
 		    {
@@ -36,12 +36,12 @@ Citizen.CreateThread(function()
 		distance = 1.5
 	})
     
-    exports['qb-target']:AddBoxZone("gunnarstacos_tray_2", vector3(416.33, -1916.8, 25.71), 0.5, 0.7, {
-		name="gunnarstacos_tray_2",
-		heading=318,
+    exports['qb-target']:AddBoxZone("GunnarsTacos-Tray2", vector3(416.28, -1916.98, 25.47), 1, 1, {
+		name="GunnarsTacos-Tray2",
+		heading=315,
 		debugPoly=false,
-		minZ=24.5,
-		maxZ=27.5,
+		minZ=24.0,
+		maxZ=27.0,
 	}, {
 		options = {
 		    {
@@ -53,16 +53,16 @@ Citizen.CreateThread(function()
 		distance = 1.5
 	})
 
-    exports['qb-target']:AddBoxZone("gunnarstacosfridge", vector3(424.27, -1921.76, 25.83), 1.5, 1.5, {
-        name="gunnarstacosfridge",
-        heading=50,
+    exports['qb-target']:AddBoxZone("GunnarsTacos-Fridge", vector3(424.18, -1921.79, 25.47), 1.5, 1, {
+        name="GunnarsTacos-Fridge",
+        heading=315,
         debugPoly=false,
-        minZ=24.5,
-        maxZ=27.5,
+		minZ=24.0,
+		maxZ=27.0,
     }, {
         options = {
            {
-            event = "nh-context:FridgeGunnarsTacos",
+            event = "nh-context:GunnarsTacos-FridgeMenu",
             icon = "fa-solid fa-refrigerator",
             label = "Open Fridge",
             job = "gt",
@@ -71,16 +71,16 @@ Citizen.CreateThread(function()
         distance = 1.5
     })
 
-    exports['qb-target']:AddBoxZone("gunnarstacosorderingredients", vector3(426.09, -1913.68, 25.75), 1.7, 1.7, {
-        name="gunnarstacosorderingredients",
-        heading=50,
+    exports['qb-target']:AddBoxZone("GunnarsTacos-OrderIngredients", vector3(425.96, -1913.62, 25.47), 2, 1.8, {
+        name="GunnarsTacos-OrderIngredients",
+        heading=315,
         debugPoly=false,
-        minZ=24.5,
-        maxZ=27.5,
+		minZ=24.0,
+		maxZ=27.0,
     }, {
         options = {
             {
-            event = "nh-context:OrderMenuGunnarsTacos",
+            event = "nh-context:GunnarsTacos-OrderIngredientsMenu",
             icon = "fas fa-laptop",
             label = "Get Ingredients",
             job = "gt",
@@ -89,16 +89,16 @@ Citizen.CreateThread(function()
         distance = 1.5
     })
 
-    exports['qb-target']:AddBoxZone("gunnarstacosdisplay", vector3(420.22, -1916.67, 25.62), 1.3, 1.0, {
-        name="gunnarstacosdisplay",
-        heading=50,
+    exports['qb-target']:AddBoxZone("GunnarsTacos-Display1", vector3(420.06, -1916.67, 25.47), 2, 0.9, {
+        name="GunnarsTacos-Display1",
+        heading=315,
         debugPoly=false,
-        minZ=24.5,
-        maxZ=27.5,
+		minZ=24.0,
+		maxZ=27.0,
     }, {
         options = {
             {
-            event = "go-gunnarstacos:Storage",
+            event = "go-gunnarstacos:Display",
             icon = "fas fa-box",
             label = "Storage",
             job = "gt",
@@ -107,16 +107,34 @@ Citizen.CreateThread(function()
         distance = 1.5
     })
 
-    exports['qb-target']:AddBoxZone("makefoodgunnarstacos", vector3(427.57, -1918.39, 25.46), 1.8, 0.7, {
-        name="makefoodgunnarstacos",
-        heading=140,
+    exports['qb-target']:AddBoxZone("GunnarsTacos-Display2", vector3(424.83, -1914.34, 25.48), 1.6, 0.7, {
+        name="GunnarsTacos-Display2",
+        heading=225,
         debugPoly=false,
-        minZ=24.5,
-        maxZ=27.5,
+		minZ=24.0,
+		maxZ=27.0,
     }, {
         options = {
             {
-            event = "nh-context:FoodsGunnarsTacos",
+            event = "go-gunnarstacos:Display",
+            icon = "fas fa-box",
+            label = "Storage",
+            job = "gt",
+            },
+        },
+        distance = 1.5
+    })
+
+    exports['qb-target']:AddBoxZone("GunnarsTacos-MakeFood", vector3(422.91, -1922.99, 25.47), 2, 0.8, {
+        name="GunnarsTacos-MakeFood",
+        heading=315,
+        debugPoly=false,
+		minZ=24.0,
+		maxZ=27.0,
+    }, {
+        options = {
+            {
+            event = "nh-context:GunnarsTacos-FoodMenu",
             icon = "fa-solid fa-taco",
             label = "Food Work Station",
             job = "gt",
@@ -126,16 +144,16 @@ Citizen.CreateThread(function()
     })
 
 
-    exports['qb-target']:AddBoxZone("makemealsgunnarstacos", vector3(421.28, -1915.42, 25.56), 1.8, 0.7, {
-        name="makemealsgunnarstacos",
-        heading=140,
+    exports['qb-target']:AddBoxZone("GunnarsTacos-MakeMeals", vector3(427.62, -1918.54, 25.47), 1.7, 1, {
+        name="GunnarsTacos-MakeMeals",
+        heading=315,
         debugPoly=false,
-        minZ=24.5,
-        maxZ=27.5,
+		minZ=24.0,
+		maxZ=27.0,
     }, {
         options = {
             {
-            event = "nh-context:MealsGunnarsTacos",
+            event = "nh-context:GunnarsTacos-MealMenu",
             icon = "fa-solid fa-hand-holding-box",
             label = "Meal Work Station",
             job = "gt",
@@ -143,17 +161,17 @@ Citizen.CreateThread(function()
         },
         distance = 1.5
     })
-    
-    exports['qb-target']:AddBoxZone("cookingmeatgunnarstacos", vector3(425.31, -1920.79, 25.29), 1.8, 0.7, {
-        name="cookingmeatgunnarstacos",
-        heading=140,
+
+    exports['qb-target']:AddBoxZone("GunnarsTacos-CookMeats", vector3(425.3, -1920.77, 25.47), 1.6, 1, {
+        name="GunnarsTacos-CookMeats",
+        heading=315,
         debugPoly=false,
-        minZ=24.5,
-        maxZ=27.5,
+		minZ=24.0,
+		maxZ=27.0,
     }, {
         options = {
             {
-            event = "nh-context:CookMeatGunnarsTacos",
+            event = "nh-context:GunnarsTacos-CookMeatMenu",
             icon = "fa-solid fa-meat",
             label = "Cook Meats Work Station",
             job = "gt",
@@ -162,12 +180,12 @@ Citizen.CreateThread(function()
         distance = 1.5
     })
 
-    exports['qb-target']:AddBoxZone("GunnarsTacos_register_1", vector3(419.07, -1914.49, 25.86), 1.0, 0.8, {
-        name="GunnarsTacos_register_1",
+    exports['qb-target']:AddBoxZone("GunnarsTacos-Register1", vector3(418.98, -1914.3, 25.47), 0.8, 0.8, {
+        name="GunnarsTacos-Register1",
+        heading=315,
         debugPoly=false,
-        heading=125,
-        minZ=24.5,
-        maxZ=27.5,
+		minZ=24.0,
+		maxZ=27.0,
     }, {
         options = {
             {
@@ -181,12 +199,12 @@ Citizen.CreateThread(function()
         distance = 1.5
     })
 
-    exports['qb-target']:AddBoxZone("GunnarsTacos_register_2", vector3(416.96, -1916.28, 25.86), 1.0, 0.8, {
-        name="GunnarsTacos_register_2",
+    exports['qb-target']:AddBoxZone("GunnarsTacos-Register2", vector3(416.94, -1916.34, 25.47), 0.8, 0.8, {
+        name="GunnarsTacos-Register2",
+        heading=315,
         debugPoly=false,
-        heading=125,
-        minZ=24.5,
-        maxZ=27.5,
+		minZ=24.0,
+		maxZ=27.0,
     }, {
         options = {
             {
@@ -200,16 +218,16 @@ Citizen.CreateThread(function()
         distance = 1.5
     })
 
-    exports['qb-target']:AddBoxZone("gunnarstacosdrinks", vector3(418.86, -1917.76, 25.5), 1.0, 0.6, {
-        name="gunnarstacosdrinks",
-        heading=34,
+    exports['qb-target']:AddBoxZone("GunnarsTacos-SodaDispenser1", vector3(418.84, -1917.76, 25.47), 0.8, 0.8, {
+        name="GunnarsTacos-SodaDispenser1",
+        heading=315,
         debugPoly=false,
-        minZ=24.5,
-        maxZ=27.5,
+		minZ=24.0,
+		maxZ=27.0,
     }, {
         options = {
             {
-            event = "nh-context:DrinkMenuGunnarsTacos",
+            event = "nh-context:GunnarsTacos-SodaDispenserMenu",
             icon = "fas fa-filter",
             label = "Make Some Soda and Coffee",
             job = "gt",
@@ -218,16 +236,16 @@ Citizen.CreateThread(function()
         distance = 1.5
     })
 
-    exports['qb-target']:AddBoxZone("gunnarstacosdrinks2", vector3(422.98, -1912.66, 25.64), 1.0, 0.6, {
-        name="gunnarstacosdrinks2",
-        heading=34,
+    exports['qb-target']:AddBoxZone("GunnarsTacos-SodaDispenser2", vector3(422.97, -1912.58, 25.47), 1.3, 0.8, {
+        name="GunnarsTacos-SodaDispenser2",
+        heading=225,
         debugPoly=false,
-        minZ=24.5,
-        maxZ=27.5,
+		minZ=24.0,
+		maxZ=27.0,
     }, {
         options = {
             {
-            event = "nh-context:DrinkMenuGunnarsTacos",
+            event = "nh-context:GunnarsTacos-SodaDispenserMenu",
             icon = "fas fa-filter",
             label = "Make Some Soda and Coffee",
             job = "gt",
@@ -240,7 +258,7 @@ end)
 
 -- QB-Menu --
 
-RegisterNetEvent('nh-context:FoodsGunnarsTacos', function(data)
+RegisterNetEvent('nh-context:GunnarsTacos-FoodMenu', function(data)
     exports['qb-menu']:openMenu({
         {
             header = "Available Foods",
@@ -295,7 +313,7 @@ RegisterNetEvent('nh-context:FoodsGunnarsTacos', function(data)
     })
 end)
 
-RegisterNetEvent('nh-context:MealsGunnarsTacos', function(data)
+RegisterNetEvent('nh-context:GunnarsTacos-MealMenu', function(data)
     exports['qb-menu']:openMenu({
         {
             header = "Available Foods",
@@ -322,7 +340,7 @@ RegisterNetEvent('nh-context:MealsGunnarsTacos', function(data)
     })
 end)
 
-RegisterNetEvent('nh-context:CookMeatGunnarsTacos', function(data)
+RegisterNetEvent('nh-context:GunnarsTacos-CookMeatMenu', function(data)
     exports['qb-menu']:openMenu({
         {
             header = "Available Foods",
@@ -349,7 +367,7 @@ RegisterNetEvent('nh-context:CookMeatGunnarsTacos', function(data)
     })
 end)
 
-RegisterNetEvent('nh-context:FridgeGunnarsTacos', function(data)
+RegisterNetEvent('nh-context:GunnarsTacos-FridgeMenu', function(data)
     exports['qb-menu']:openMenu({
         {
             header = "Fridge",
@@ -369,7 +387,7 @@ RegisterNetEvent('nh-context:FridgeGunnarsTacos', function(data)
     })
 end)
 
-RegisterNetEvent('nh-context:OrderMenuGunnarsTacos', function(data)
+RegisterNetEvent('nh-context:GunnarsTacos-OrderIngredientsMenu', function(data)
     exports['qb-menu']:openMenu({
         {
             header = "Ingredients",
@@ -389,7 +407,7 @@ RegisterNetEvent('nh-context:OrderMenuGunnarsTacos', function(data)
     })
 end)
 
-RegisterNetEvent('nh-context:DrinkMenuGunnarsTacos', function(data)
+RegisterNetEvent('nh-context:GunnarsTacos-SodaDispenserMenu', function(data)
     exports['qb-menu']:openMenu({
         {
             id = 0,

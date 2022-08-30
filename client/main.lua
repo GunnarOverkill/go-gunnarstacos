@@ -61,8 +61,8 @@ end)
 
 RegisterNetEvent("go-gunnarstacos:Tray1")
 AddEventHandler("go-gunnarstacos:Tray1", function()
-    TriggerEvent("inventory:client:SetCurrentStash", "tacotray1")
-    TriggerServerEvent("inventory:server:OpenInventory", "stash", "tacotray1", {
+    TriggerEvent("inventory:client:SetCurrentStash", "GunnarsTacos-Tray1")
+    TriggerServerEvent("inventory:server:OpenInventory", "stash", "GunnarsTacos-Tray1", {
         maxweight = 30000,
         slots = 6,
     })
@@ -70,26 +70,17 @@ end)
 
 RegisterNetEvent("go-gunnarstacos:Tray2")
 AddEventHandler("go-gunnarstacos:Tray2", function()
-    TriggerEvent("inventory:client:SetCurrentStash", "tacotray2")
-    TriggerServerEvent("inventory:server:OpenInventory", "stash", "tacotray2", {
+    TriggerEvent("inventory:client:SetCurrentStash", "GunnarsTacos-Tray2")
+    TriggerServerEvent("inventory:server:OpenInventory", "stash", "GunnarsTacos-Tray2", {
         maxweight = 30000,
         slots = 6,
     })
 end)
 
-RegisterNetEvent("go-gunnarstacos:Storage")
-AddEventHandler("go-gunnarstacos:Storage", function()
-    TriggerEvent("inventory:client:SetCurrentStash", "tacostorage")
-    TriggerServerEvent("inventory:server:OpenInventory", "stash", "tacostorage", {
-        maxweight = 1000000,
-        slots = 100,
-    })
-end)
-
-RegisterNetEvent("go-gunnarstacos:Storage2")
-AddEventHandler("go-gunnarstacos:Storage2", function()
-    TriggerEvent("inventory:client:SetCurrentStash", "tacostorage2")
-    TriggerServerEvent("inventory:server:OpenInventory", "stash", "tacostorage2", {
+RegisterNetEvent("go-gunnarstacos:Display")
+AddEventHandler("go-gunnarstacos:Display", function()
+    TriggerEvent("inventory:client:SetCurrentStash", "GunnarsTacos-Display")
+    TriggerServerEvent("inventory:server:OpenInventory", "stash", "GunnarsTacos-Display", {
         maxweight = 1000000,
         slots = 100,
     })
