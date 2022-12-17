@@ -1,3 +1,5 @@
+OUTDATED! New Version of QB/QB-Inventory changes things and I am unsure how to fix them.
+
 Based on the ATMTACO MLO
 
 *Feel free to change it from gunnarstacos to tacoshop or whatever u want it to be. I also have a version that is go-tacoshop that changes everything to taco shop.*
